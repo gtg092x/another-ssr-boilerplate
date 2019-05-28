@@ -1,5 +1,6 @@
 import { setHome, setAbout } from './reducer'
 
+// These are where we get our data! Treat them like any other thunk
 export const loadHome = () => async (dispatch, getState, services) => {
   setHome(null)
   const { data }  = await services.client('/api/home')

@@ -11,9 +11,9 @@ router.get('/home', (ctx) => {
 })
 
 router.get('/about', async (ctx) => {
-  await new Promise(resolve => setTimeout(resolve, 2000))
+  await new Promise(resolve => setTimeout(resolve, 500))
   ctx.body = {
-    content: 'This is our about section. It took two seconds to load.',
+    content: 'This is our about section. It took 500 milliseconds to load.',
   }
 })
 
@@ -22,4 +22,5 @@ const middleware = compose([
   router.routes(),
 ])
 
+// this would make all routes have `/api` in front of them (e.g. /api/home)
 export default mount('/api', middleware)

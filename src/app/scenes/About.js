@@ -9,7 +9,7 @@ const About = () => {
     <div>
       <Nav />
       <h1>About</h1>
-      {content || 'Loading...'}
+      <p>{content || 'Loading...'}</p>
     </div>
   )
 }

@@ -23,6 +23,9 @@ export const selectAbout = (state) => {
   return state.about || {}
 }
 
+// This example opts for a very simple Redux store
+// As these scale in complexity, it might be worth
+// it to check out more opinionated redux designs.
 export default function reducer(state = {}, action) {
   switch (action.type) {
     case SET_HOME:

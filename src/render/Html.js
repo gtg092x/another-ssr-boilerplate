@@ -1,6 +1,4 @@
-/* eslint-disable react/no-danger */
 import React from 'react'
-import PropTypes from 'prop-types'
 
 const Html = (props) => {
   const { app, store } = props
@@ -8,6 +6,10 @@ const Html = (props) => {
     <html lang="en">
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        {/*
+          If you take this to the next level,
+          use a real style sheet built with something like less
+        */}
         <style type="text/css" dangerouslySetInnerHTML={{ __html: `
           nav > a {
             display: inline-block;

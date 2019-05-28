@@ -8,6 +8,9 @@ import {
   loadHome,
 } from './services/loaders'
 
+const noop = () => undefined
+
+// Route definitions
 const HOME = {
   exact: true,
   path: '/',
@@ -17,8 +20,10 @@ const ABOUT = {
   path: '/about',
 }
 
-const noop = () => undefined
-
+// This is a very unsophisticated data loader
+// as you add more routes check out static resolvers like
+// https://github.com/ReactTraining/react-router/tree/master/packages/react-router-config
+// We wrote our own that accepts an array like [[ROUTE, loaderMethod], [OTHER_ROUTE, otherLoaderMethod]]
 export const loadDataForLocation = prevLocation => async (
   dispatch,
   getState,
@@ -41,6 +46,7 @@ export const loadDataForLocation = prevLocation => async (
   return noop
 }
 
+// These are our actual routes
 const Routes = () => (
   <Switch>
     <Route {...HOME} component={Home} />
