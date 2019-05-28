@@ -29,7 +29,7 @@ The general rule of thumb is that anything inside `src/app` is client and server
 
 ### src
 
-All application code. Is bundled when app is released.
+Code for the entire application. It's bundled into lib when app is built.
 
 ### src/api
 
@@ -37,7 +37,7 @@ A [koa-router](https://github.com/ZijianHe/koa-router) powered middleware that i
 
 ### src/assets
 
-Middleware that servers either static assets or [webpack-dev-server](https://github.com/webpack/webpack-dev-server) depending on the environment variable WEBPACK_PORT.
+Middleware that serves either static assets or proxies [webpack-dev-server](https://github.com/webpack/webpack-dev-server) depending on the environment variable WEBPACK_PORT.
 
 ### src/render
 

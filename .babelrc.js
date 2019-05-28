@@ -37,9 +37,9 @@ const envBrowser = {
 
 module.exports = function (api) {
 
-  const isWebpack = api.caller(caller => !!(caller && caller.name === 'babel-loader'))
-
   api.cache.using(() => NODE_ENV)
+
+  const isWebpack = api.caller(caller => !!(caller && caller.name === 'babel-loader'))
 
   const envConfig = isWebpack
     ? envBrowser
